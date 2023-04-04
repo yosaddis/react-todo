@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from '../styles/TodoItem.module.css';
 
 const TodoItem = ({ itemProp, handleChange, delTodo }) => {
@@ -24,4 +25,11 @@ const TodoItem = ({ itemProp, handleChange, delTodo }) => {
     </li>
   );
 };
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
+};
+
 export default TodoItem;
